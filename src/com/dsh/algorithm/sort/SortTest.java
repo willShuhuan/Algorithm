@@ -30,13 +30,15 @@ public class SortTest {
 //        ShellSort.shellSort2(array);//0.02s
         // 5 快速排序
 //        QuickSort.quickSort(array,0,array.length-1);//0.02-0.05s之间
+        QuickSort.quickSort2(array,0,array.length-1);//0.02s左右
         // 6 归并排序
 //        MergeSort.mergeSort(array,0,array.length-1,new int[array.length]);//0.03-0.06s之间
         // 7 基数排序
-        RadixSort.radixSort(array);//0.012~0.019s 之间
+//        RadixSort.radixSort(array);//0.012~0.019s 之间
 
         long after = System.currentTimeMillis();
         Long duration = after-before;
+        System.out.println("duration=="+duration);
         System.out.println("排序消耗时间为=="+String.format("%.3f",duration.doubleValue()/1000 )+"s");
     }
 }

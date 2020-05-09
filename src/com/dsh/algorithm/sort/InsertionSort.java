@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author DSH
  * @date 2020/4/30
- * @description
+ * @description 插入排序
  */
 public class InsertionSort {
     public static void main(String[] args) {
@@ -56,6 +56,7 @@ public class InsertionSort {
         while(insertIndex>=0&&insertVal<arr[insertIndex]){//保证不越界
             arr[insertIndex+1] = arr[insertIndex];
             insertIndex--;
+            System.out.println("插入循环=="+Arrays.toString(arr));
         }
         //当退出while循环时，说明插入的位置找到了，insertIndex+1;
         arr[insertIndex+1] = insertVal;
@@ -68,6 +69,7 @@ public class InsertionSort {
         while(insertIndex>=0&&insertVal<arr[insertIndex]){//保证不越界
             arr[insertIndex+1] = arr[insertIndex];
             insertIndex--;
+            System.out.println("插入循环=="+Arrays.toString(arr));
         }
         //当退出while循环时，说明插入的位置找到了，insertIndex+1;
         arr[insertIndex+1] = insertVal;
@@ -80,6 +82,7 @@ public class InsertionSort {
         while(insertIndex>=0&&insertVal<arr[insertIndex]){//保证不越界
             arr[insertIndex+1] = arr[insertIndex];
             insertIndex--;
+            System.out.println("插入循环=="+Arrays.toString(arr));
         }
         //当退出while循环时，说明插入的位置找到了，insertIndex+1;
         arr[insertIndex+1] = insertVal;
@@ -105,7 +108,6 @@ public class InsertionSort {
 //                System.out.println(Arrays.toString(newArr));
             }
         }
-
     }
 
 

@@ -10,7 +10,8 @@ import java.util.Arrays;
 public class QuickSort {
     public static void main(String[] args) {
         int[] arr = {-9,78,0,23,-567,70};
-        quickSort(arr,0,arr.length-1);
+//        quickSort(arr,0,arr.length-1);
+        quickSort2(arr,0,arr.length-1);
         System.out.println("arr="+Arrays.toString(arr));
     }
 
@@ -48,7 +49,6 @@ public class QuickSort {
                 l++;
             }
         }
-
         //如果l == r，必须l++，r--，否则出现栈溢出
         if (l==r){
             l++;
@@ -62,6 +62,36 @@ public class QuickSort {
         if (right>l){
             quickSort(arr,l,right);
         }
+    }
+
+
+    //以数组第一个值为基准
+    public static void quickSort2(int[] arr,int left,int right) {
+        int povit;
+        if (left<right){
+            povit = partition(arr,left,right);
+            quickSort2(arr,left,povit-1);
+            quickSort2(arr,povit+1,right);
+        }
+
+    }
+
+    private static int partition(int[] arr, int left, int right) {
+        int pivot = arr[left];
+        while (left<right){
+            while (left<right&&arr[right]>=pivot){
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left<right&&arr[left]<=pivot){
+                left++;
+            }
+            arr[right] = arr[left];
+//            System.out.println("排序后=="+Arrays.toString(arr));
+        }
+        arr[left] = pivot;
+//        System.out.println("循环后=="+Arrays.toString(arr));
+        return left;
     }
 
 }
