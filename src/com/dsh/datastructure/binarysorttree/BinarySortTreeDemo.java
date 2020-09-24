@@ -3,7 +3,7 @@ package com.dsh.datastructure.binarysorttree;
 /**
  * @author DSH
  * @date 2020/9/22
- * @description
+ * @description 二叉排序树BST
  */
 public class BinarySortTreeDemo {
     public static void main(String[] args) {
